@@ -1,0 +1,14 @@
+services: 
+  db:
+    image : pgvector/pgvector:pg16 
+    container_name: agentharness_db
+    restart: on-failure
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

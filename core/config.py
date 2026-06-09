@@ -7,6 +7,9 @@ class Settings(BaseSettings):
     POSTGRES_PORT : int = 5432
     POSTGRES_DB : str 
 
+    OPENROUTERAPIKEY : str
+    HUGGINGFACEAPIKEY : str
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8"
